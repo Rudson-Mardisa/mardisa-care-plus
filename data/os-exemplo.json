@@ -1,0 +1,65 @@
+{
+  "ordem_servico": "MARDISA-25874",
+  "veiculo": "Mercedes-Benz Atego 2426",
+  "status": "servico_em_andamento",
+  "ultima_atualizacao": "2026-09-07T14:30:00",
+  "etapas": [
+    {
+      "id": "recebido",
+      "nome": "Veículo recebido",
+      "concluida": true
+    },
+    {
+      "id": "diagnostico",
+      "nome": "Diagnóstico realizado",
+      "concluida": true
+    },
+    {
+      "id": "aprovacao",
+      "nome": "Orçamento / aprovação",
+      "concluida": true
+    },
+    {
+      "id": "servico",
+      "nome": "Serviço em andamento",
+      "concluida": true,
+      "atual": true
+    },
+    {
+      "id": "qualidade",
+      "nome": "Controle de qualidade",
+      "concluida": false
+    },
+    {
+      "id": "pronto",
+      "nome": "Veículo pronto",
+      "concluida": false
+    }
+  ],
+  "checkup": [
+    {
+      "item": "Motor",
+      "status": "OK"
+    },
+    {
+      "item": "Freios",
+      "status": "Atenção"
+    },
+    {
+      "item": "Pneus",
+      "status": "OK"
+    },
+    {
+      "item": "Suspensão",
+      "status": "OK"
+    },
+    {
+      "item": "Fluidos",
+      "status": "Atenção"
+    },
+    {
+      "item": "Elétrica",
+      "status": "OK"
+    }
+  ]
+}

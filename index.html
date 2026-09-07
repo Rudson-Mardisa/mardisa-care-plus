@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<title>Mardisa Care+ | Acompanhamento do Pós-venda</title>
+<style>
+:root{--black:#111;--gray:#6b7280;--light:#f5f6f8;--line:#e5e7eb;--green:#16803c;--yellow:#b77900;--red:#b42318;--white:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--light);color:#151515}
+header{background:var(--black);color:#fff;padding:20px 18px}
+.header{max-width:760px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-size:22px;font-weight:800;letter-spacing:.2px}.brand span{font-weight:400}
+.badge{border:1px solid #555;border-radius:20px;padding:7px 11px;font-size:12px}
+main{max-width:760px;margin:0 auto;padding:18px}
+.hero{background:#fff;border-radius:18px;padding:20px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+h1{font-size:25px;margin:0 0 8px}.muted{color:var(--gray);line-height:1.5}
+.vehicle{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.info{background:var(--light);border-radius:12px;padding:13px}.label{font-size:11px;color:var(--gray);text-transform:uppercase}.value{font-weight:700;margin-top:5px}
+.section{background:#fff;border-radius:18px;padding:20px;margin-top:15px;box-shadow:0 4px 18px rgba(0,0,0,.05)}
+.section h2{font-size:18px;margin:0 0 15px}
+.timeline{position:relative;padding-left:30px}.timeline:before{content:"";position:absolute;left:9px;top:5px;bottom:5px;width:2px;background:var(--line)}
+.step{position:relative;margin:0 0 20px}.dot{position:absolute;left:-26px;top:2px;width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid #bbb;z-index:1}
+.step.done .dot{background:var(--green);border-color:var(--green)}.step.current .dot{background:#fff;border-color:#111}
+.step strong{display:block}.step small{display:block;color:var(--gray);margin-top:4px}
+.status{display:inline-block;margin-top:14px;padding:8px 12px;border-radius:20px;background:#e9f7ee;color:var(--green);font-size:13px;font-weight:700}
+.health{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{border:1px solid var(--line);border-radius:12px;padding:13px}.ok{color:var(--green)}.attention{color:var(--yellow)}.need{color:var(--red)}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;border:0;border-radius:12px;padding:12px 15px;font-weight:700;cursor:pointer}.primary{background:#111;color:#fff}.secondary{background:#eef0f2;color:#111}
+.evidence{background:#fafafa;border:1px dashed #cfd3d8;border-radius:12px;padding:15px;line-height:1.5}
+footer{max-width:760px;margin:auto;padding:25px 18px 35px;text-align:center;color:var(--gray);font-size:12px}
+@media(max-width:600px){.vehicle,.health{grid-template-columns:1fr}.header{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="header"><div class="brand">MARDISA <span>CARE+</span></div><div class="badge">Pós-venda inteligente</div></div></header>
+<main>
+<section class="hero">
+  <h1>Seu Mercedes-Benz acompanhado em cada etapa.</h1>
+  <p class="muted">Acompanhe o andamento da Ordem de Serviço, entenda os diagnósticos e consulte um resumo da saúde do veículo.</p>
+  <div class="vehicle">
+    <div class="info"><div class="label">Ordem de Serviço</div><div class="value" id="os">MARDISA-25874</div></div>
+    <div class="info"><div class="label">Veículo</div><div class="value">Mercedes-Benz Atego 2426</div></div>
+    <div class="info"><div class="label">Cliente</div><div class="value">Cliente Mardisa</div></div>
+    <div class="info"><div class="label">Última atualização</div><div class="value" id="updated">07/09/2026 • 14:30</div></div>
+  </div>
+  <div class="status">● Serviço em andamento</div>
+</section>
+
+<section class="section">
+<h2>Andamento do serviço</h2>
+<div class="timeline">
+  <div class="step done"><span class="dot"></span><strong>Veículo recebido</strong><small>Entrada registrada na Mardisa.</small></div>
+  <div class="step done"><span class="dot"></span><strong>Diagnóstico realizado</strong><small>Inspeção inicial concluída.</small></div>
+  <div class="step done"><span class="dot"></span><strong>Orçamento / aprovação</strong><small>Serviços recomendados registrados.</small></div>
+  <div class="step current"><span class="dot"></span><strong>Serviço em andamento</strong><small>Equipe técnica trabalhando no veículo.</small></div>
+  <div class="step"><span class="dot"></span><strong>Controle de qualidade</strong><small>Etapa posterior à execução.</small></div>
+  <div class="step"><span class="dot"></span><strong>Veículo pronto</strong><small>Aguardando conclusão do atendimento.</small></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Diagnóstico transparente</h2>
+<div class="evidence"><strong>Exemplo de evidência técnica</strong><br>
+Aqui podem ser inseridas fotos ou vídeos curtos enviados pelo consultor/técnico para demonstrar uma condição encontrada no veículo e explicar a recomendação de serviço.
+</div>
+<div class="actions" style="margin-top:12px"><button class="btn primary" onclick="alert('No projeto real, este botão abrirá a evidência anexada à OS.')">Ver evidência</button></div>
+</section>
+
+<section class="section">
+<h2>Check-up Digital Mercedes</h2>
+<div class="health">
+  <div class="card"><strong>Motor</strong><br><span class="ok">● OK</span><br><small>Sem recomendação cadastrada.</small></div>
+  <div class="card"><strong>Freios</strong><br><span class="attention">● Atenção</span><br><small>Acompanhar desgaste.</small></div>
+  <div class="card"><strong>Pneus</strong><br><span class="ok">● OK</span><br><small>Condição registrada.</small></div>
+  <div class="card"><strong>Suspensão</strong><br><span class="ok">● OK</span><br><small>Sem recomendação cadastrada.</small></div>
+  <div class="card"><strong>Fluidos</strong><br><span class="attention">● Atenção</span><br><small>Verificar na próxima revisão.</small></div>
+  <div class="card"><strong>Elétrica</strong><br><span class="ok">● OK</span><br><small>Sem recomendação cadastrada.</small></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Fale com a Mardisa</h2>
+<p class="muted">No projeto real, o botão abaixo direcionará o cliente ao WhatsApp Business oficial da unidade.</p>
+<a class="btn primary" href="#" onclick="alert('Substitua este link pelo WhatsApp Business oficial da Mardisa.');return false;">Abrir WhatsApp</a>
+</section>
+</main>
+<footer>Mardisa Care+ • Protótipo demonstrativo • Informações ilustrativas</footer>
+<script>
+const params = new URLSearchParams(location.search);
+const os = params.get('os');
+if(os) document.getElementById('os').textContent = 'MARDISA-' + os.replace(/^MARDISA-/i,'');
+</script>
+</body>
+</html>
